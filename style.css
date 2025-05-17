@@ -253,7 +253,7 @@ button:hover {
 
 
 
-.popup {
+.popup-hidden {
   display: none;
   position: fixed;
   top: 0; /* Start at the top of the page */
@@ -273,15 +273,23 @@ button:hover {
 }
 
 
-.popup.show {
+.popup-hidden.show {
   display: flex;
 }
 
-.popup p {
+.popup-hidden p {
   margin: 0;
   font-size: 50px; 
 }
 
-.popup.show {
+.popup-hidden.show {
   display: block;
+}
+
+.hidden-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  width: 0;
 }

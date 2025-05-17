@@ -24,6 +24,10 @@ const shareText = document.getElementById("share-text");
 const playAgainButton = document.getElementById("play-again-button");
 const refreshButton = document.getElementById("refresh-button"); 
 
+
+const hiddenInput = document.getElementById("hidden-input");
+
+
 const hintTexts = {
   word1: " ",
   word2: " "
@@ -119,6 +123,7 @@ hintButton.addEventListener("click", () => {
   currentIndex = 0;
 
   highlightCurrentTile();
+  hiddenInput.focus(); 
 
   // Mark that a hint was used
   hintUsed = true;
@@ -126,6 +131,31 @@ hintButton.addEventListener("click", () => {
   hintButton.style.backgroundColor = "#d3d3d3";  
   hintButton.style.cursor = "not-allowed";  
 });
+hiddenInput.addEventListener("input", () => {
+  const value = hiddenInput.value.toUpperCase();
+  hiddenInput.value = ""; // Clear the field for next input
+
+  if (/^[A-Z]$/.test(value)) {
+    handleLetterInput(value);
+  }
+});
+
+function handleLetterInput(letter) {
+  const tileId = currentWord === 1
+    ? `word1-tile-${currentIndex}`
+    : `word2-tile-${currentIndex}`;
+  const tile = document.getElementById(tileId);
+  tile.textContent = letter;
+
+  if (currentIndex < (currentWord === 1 ? answer1.length : answer2.length) - 1) {
+    currentIndex++;
+  } else if (currentWord === 1) {
+    currentWord = 2;
+    currentIndex = 0;
+  }
+
+  highlightCurrentTile();
+}
 
 // Create tile inputs
 function createTiles(length, container, wordId) {
@@ -149,42 +179,16 @@ function highlightCurrentTile() {
 }
 
 window.addEventListener("keydown", (e) => {
-  if (mode !== "tiles") return;
-  const key = e.key;
+  // Only allow this block if we're in "free" mode
+  if (mode !== "free") return;
 
-  if (/^[a-zA-Z]$/.test(key)) {
-    const letter = key.toUpperCase();
-    const tileId = currentWord === 1
-      ? `word1-tile-${currentIndex}`
-      : `word2-tile-${currentIndex}`;
-    const tile = document.getElementById(tileId);
-    tile.textContent = letter;
-
-    if (currentIndex < (currentWord === 1 ? answer1.length : answer2.length) - 1) {
-      currentIndex++;
-    } else if (currentWord === 1) {
-      currentWord = 2;
-      currentIndex = 0;
-    }
-
-    highlightCurrentTile();
-  } else if (key === "Backspace") {
-    const tileId = currentWord === 1
-      ? `word1-tile-${currentIndex}`
-      : `word2-tile-${currentIndex}`;
-    const tile = document.getElementById(tileId);
-    if (tile.textContent) {
-      tile.textContent = "";
-    } else if (currentIndex > 0) {
-      currentIndex--;
-      document.getElementById(tileId).textContent = "";
-    } else if (currentWord === 2 && currentIndex === 0) {
-      currentWord = 1;
-      currentIndex = answer1.length - 1;
-    }
-
-    highlightCurrentTile();
+  // Allow pressing Enter to submit
+  if (e.key === "Enter") {
+    submitButton.click();
+    return;
   }
+
+  // Otherwise, allow normal typing in the input boxes
 });
 
 // Submit button
