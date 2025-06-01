@@ -560,59 +560,69 @@ main {
 }
 
 @media (max-width: 900px) {
-  .header-flex {
-    gap: 2rem;
-    max-width: 98vw;
+  .layout {
+    display: block;
+    height: auto;
   }
-
-  .headshot-img {
-    width: 140px;
-    height: 140px;
+  .sidebar {
+    position: static;
+    width: 100%;
+    max-width: 100vw;
+    box-shadow: none;
+    padding: 1rem 0.7rem;
+    border-radius: 0;
+    background: #f7f3ed;
+    margin-bottom: 1.5rem;
   }
-
-  .header-nav-bottom {
-    gap: 1rem;
-    margin-top: 1.2rem;
-    bottom: 1rem;
+  main {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 1.2rem 0.7rem 2.5rem 0.7rem;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .header-nav-top {
+    left: 0;
+    width: 100vw;
+    padding: 0.7rem 0.2rem;
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+  .header-nav-top a {
+    font-size: 1rem;
+    padding: 7px 10px;
+    margin: 0 4px 0 0;
+  }
+  .teaching-item {
+    max-width: 100vw;
+    padding: 1rem 0.5rem;
+    margin: 0.7rem 0;
+  }
+  .sidebar h1 {
+    font-size: 2rem;
+  }
+  .sidebar h3, .sidebar p, .sidebar ul {
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 700px) {
-  .header-flex {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+@media (max-width: 600px) {
+  .sidebar {
+    padding: 0.7rem 0.3rem;
   }
-
-  .headshot-img {
-    width: 110px;
-    height: 110px;
+  main {
+    padding: 0.7rem 0.2rem 2rem 0.2rem;
   }
-
-  .header-nav-bottom {
-    margin-top: 1.2rem;
-    width: 100%;
-    justify-content: flex-start;
-    position: static;
-    background: transparent;
+  .header-nav-top {
+    font-size: 0.98rem;
+    gap: 0.2rem;
+    padding: 0.5rem 0.1rem;
   }
-
-  .bio-text {
-    font-size: 1rem;
+  .teaching-item {
+    padding: 0.7rem 0.2rem;
   }
-
-  .header-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.7rem;
-  }
-
-  .education-list {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.2rem;
-    font-size: 0.95rem;
+  .sidebar h1 {
+    font-size: 1.3rem;
   }
 }
