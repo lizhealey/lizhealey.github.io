@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
   allButtonsContainer.style.display = 'flex';
   allButtonsContainer.style.flexWrap = 'wrap';
   allButtonsContainer.style.justifyContent = 'center';
-  allButtonsContainer.style.gap = '0.5rem';
+  allButtonsContainer.style.gap = '0';
 
   // Show All button (rectangular, not round)
   const showAllBtn = document.createElement('button');
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
         article.style.margin = '0.5em auto';
         article.style.maxWidth = '540px';
         article.style.border = '1px solid #e0e0e0';
-        article.style.borderRadius = '12px';
+        article.style.borderRadius = '0px';
         article.style.background = '#fff';
         article.style.boxShadow = '0 1px 4px rgba(0,0,0,0.03)';
         article.style.fontSize = '0.97em';
