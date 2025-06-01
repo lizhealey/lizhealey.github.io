@@ -1,28 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CP1CJJQJJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2CP1CJJQJJ');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Personal Website</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>My  Website</title>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech:400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  
+  <style>
+    header {
+      padding: 0; /* Removed gap between top of page and header */
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <h1>Welcome to My Website</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="publications.html">Publications</a>
-      <a href="teaching.html">Teaching</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>Hello! I'm a [Your Profession]. Welcome to my personal website.</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
+<body style="overflow-y: auto;"> <!-- Makes the entire page scrollable -->
+  <div class="layout">
+    <aside class="sidebar">
+      <h1>Elizabeth Healey, PhD</h1>
+      <p>
+        Research Fellow in
+        Machine Learning for Healthcare
+      </p>
+      
+      <h3>Education</h3>
+      <p>
+        Ph.D., Massachusetts Institute of Technology<br>
+        <em>Health Sciences and Technology</em>
+      </p>
+      <p>
+        B.S., Harvard College<br>
+        <em>Electrical Engineering</em>
+      </p>
+      <h3>Interests</h3>
+      <ul>
+        <li>Machine Learning for Precision Medicine</li>
+        <li>Clinical Decision Support</li>
+        <li>Physiological Signal Processing</li>
+        <li>Diabetes Technology</li>
+      </ul>
+      <h3>Contact</h3>
+      <p>
+        I can be contacted at <a href="mailto:ehealey@mit.edu">ehealey@mit.edu</a>
+      </p>
+      <div class="sidebar-icons">
+        <a href="https://github.com/elizabethhealey" target="_blank" class="icon-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/elizabethhealey" target="_blank" class="icon-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=example" target="_blank" class="icon-link">
+          <i class="fas fa-graduation-cap"></i>
+        </a>
+      </div>
+      <div style="margin-bottom: 2rem;"></div> <!-- Added buffer under the links -->
+    </aside>
+    <header>
+      <nav class="header-nav-top">
+        <a href="index.html" class="active-tab">About</a>
+        <a href="publications.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+      </nav>
+    </header>
+    <main style="margin-top: 5rem;">
+      <section>
+        <h2>About</h2>
+        <img src="headshot.jpeg" alt="Elizabeth headshot" class="headshot-img" style="display:block;margin:0 auto;">
+        <p>
+        Hello! I am a final year PhD candidate in the Harvard–MIT Health Sciences and Technology program advised by Isaac Kohane and supported by the National Science Foundation GRFP. My research focus is in harnessing physiological signals and observational health data to enhance clinical decision-making and understand disease heterogeneity. My ongoing work concentrates on using continuous glucose monitoring to enable precision medicine for patients with type 2 diabetes.
+        </p>
+        <p>
+          Previously, I graduated magna cum laude from Harvard College with an S.B. degree in Electrical Engineering where I worked on biomedical control for the artificial pancreas.
+        </p>
+      </section>
+      <section>
+       <!--  <h2>News</h2>
+        <ul class="news-list">
+          <li>Received NIH R01 grant for Alzheimer's research (May 2025)</li>
+          <li>Invited keynote at International Neuroimaging Conference (Apr 2025)</li>
+          <li>New publication in NEJM on Alzheimer's Disease (Mar 2025)</li>
+        </ul>
+        <a href="news.html" class="news-more-link">See all news &rarr;</a>
+      </section> -->
+    </main>
+  </div>
+  <div style="text-align:center;color:#888;font-size:0.98rem;margin:2.5rem 0 1.2rem 0;">
+    &copy; Last updated: 2025
+  </div>
 </body>
 </html>
