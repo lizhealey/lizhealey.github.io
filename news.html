@@ -1,1 +1,85 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News</title>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700|Share+Tech:400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    header {
+      padding: 0; /* Removed gap between top of page and header */
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1>Elizabeth Healey, PhD</h1>
+      <p>
+        Research Fellow in
+        Machine Learning for Healthcare
+      </p>
+      <h3>Education</h3>
+      <p>
+        Ph.D., Massachusetts Institute of Technology<br>
+        <em>Health Sciences and Technology</em>
+      </p>
+      <p>
+        B.S., Harvard College<br>
+        <em>Electrical Engineering</em>
+      </p>
+      <h3>Interests</h3>
+      <ul>
+        <li>Machine learning for precision medicine</li>
+        <li>Clinical decision support</li>
+        <li>Wearable signal processing</li>
+        <li>Diabetes technology</li>
+      </ul>
+      <h3>Contact</h3>
+      <p>
+        I can be contacted at <a href="mailto:ehealey@mit.edu">ehealey@mit.edu</a>
+      </p>
+      <div class="sidebar-icons">
+        <a href="https://github.com/elizabethhealey" target="_blank" class="icon-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/elizabethhealey" target="_blank" class="icon-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=example" target="_blank" class="icon-link">
+          <i class="fas fa-graduation-cap"></i>
+        </a>
+      </div>
+      <div style="margin-bottom: 2rem;"></div>
+    </aside>
+    <header>
+      <nav class="header-nav-top">
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="news.html" class="active-tab">News</a>
+      </nav>
+    </header>
+    <main style="margin-top: 5rem;">
+      <section>
+        <h2>News</h2>
+        <ul class="news-list">
+          <li>Received NIH R01 grant for Alzheimer's research (May 2025)</li>
+          <li>Invited keynote at International Neuroimaging Conference (Apr 2025)</li>
+          <li>New publication in NEJM on Alzheimer's Disease (Mar 2025)</li>
+        </ul>
+        <a href="news.html" class="news-more-link">See all news &rarr;</a>
+      </section>
+    </main>
+  </div>
+  <div style="text-align:center;color:#888;font-size:0.98rem;margin:2.5rem 0 1.2rem 0;">
+    &copy; Last updated: 2025
+  </div>
+</body>
+</html>
