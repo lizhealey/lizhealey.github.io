@@ -43,7 +43,6 @@ header {
   max-width: 98vw;
   object-fit: cover;
   border-radius: 0px !important;
-  box-shadow: 0 2px 12px rgba(125, 90, 30, 0.07);
   border: 4px solid #fff;
   background: #2d2d2d;
   display: block;
@@ -320,7 +319,6 @@ footer {
   background: transparent !important;
   border-radius: 0px;
   padding: 1.2rem 1.5rem;
-  box-shadow: 0 4px 24px rgba(40,20,20,0.10);
   border: 1px solid #e7c9a9;
 }
 
@@ -449,7 +447,7 @@ footer {
   overflow: hidden;
   background: #f7f3ed;
   padding: 1rem;
-  box-shadow: 0 4px 24px rgba(40,20,20,0.10);
+  box-shadow: none !important;
 }
 
 aside.sidebar {
@@ -582,7 +580,6 @@ main {
   background-color: #fff;
   z-index: 1000;
   padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Add margin to the publications list to account for the fixed buttons */
@@ -628,7 +625,6 @@ a:hover, a:focus {
     position: static;
     width: 100%;
     max-width: 100vw;
-    box-shadow: none;
     padding: 1rem 0.7rem;
     border-radius: 0;
     background: #f7f3ed;
