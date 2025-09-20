@@ -87,7 +87,6 @@ const publications = [
     category: "Research Interests",
     interest: "Causal Machine Learning",
     type: "Conference",
-    link: "https://arxiv.org/abs/2212.08664"
   },
   {
     title: "Embedded model predictive control for a wearable artificial pancreas",
@@ -106,7 +105,6 @@ const publications = [
     journal: "arXiv",
     interest: "AI in Medicine",
     type: "Other",
-    link: "https://arxiv.org/abs/2502.06693"
   },
   {
     title: "Recent Advances, Applications and Open Challenges in Machine Learning for Health: Reflections from Research Roundtables at ML4H 2022 Symposium",
@@ -116,7 +114,6 @@ const publications = [
     category: "Research Interests",
     interest: "AI in Medicine",
     type: "Other",
-    link: "https://arxiv.org/abs/2311.08131"
   },
   {
     title: "Model-Based Insulin Sensitivity and Beta-Cell Function Estimation from Daily Continuous Glucose Monitoring",
@@ -131,7 +128,6 @@ const publications = [
     interest: "Diabetes Technology",
     type: "Conference",
     presentation: "Oral presentation at IEEE EMBC 2024",
-    link: "https://ieeexplore.ieee.org/abstract/document/10636166"
   }
 ];
 
