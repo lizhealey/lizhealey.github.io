@@ -203,14 +203,6 @@ function createPublicationElement(pub) {
     article.setAttribute('aria-label', `Read publication: ${pub.title}`);
     
     const openLink = () => {
-      // Track publication link click in Google Analytics
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'click', {
-          event_category: 'Publication Link',
-          event_label: pub.title,
-          value: 1
-        });
-      }
       window.open(pub.link, '_blank', 'noopener,noreferrer');
     };
     
@@ -271,14 +263,6 @@ function renderInterestButtons() {
   allBtn.setAttribute('aria-pressed', 'true');
   
   allBtn.addEventListener('click', (e) => {
-    // Track click in Google Analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'click', {
-        event_category: 'Research Interest Filter',
-        event_label: 'All Research Areas',
-        value: 1
-      });
-    }
     
     // Simple text link - no animations
     
@@ -317,14 +301,6 @@ function renderInterestButtons() {
       btn.setAttribute('aria-pressed', 'false');
       
       btn.addEventListener('click', (e) => {
-        // Track click in Google Analytics
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'click', {
-            event_category: 'Research Interest Filter',
-            event_label: interest,
-            value: 1
-          });
-        }
         
         // Simple text link - no animations
         
@@ -457,14 +433,6 @@ function initializeTypeFilters() {
     label.style.fontSize = '0.9rem';
     
     checkbox.addEventListener('change', () => {
-      // Track checkbox change in Google Analytics
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'click', {
-          event_category: 'Publication Filter',
-          event_label: `${type} - ${checkbox.checked ? 'Checked' : 'Unchecked'}`,
-          value: 1
-        });
-      }
       
       if (checkbox.checked) {
         selectedTypes.add(type);
