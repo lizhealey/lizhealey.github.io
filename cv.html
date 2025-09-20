@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Elizabeth Healey</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700|Share+Tech:400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="layout">
+    <nav class="header-nav-top">
+      <div class="header-name">
+        <a href="index.html" class="site-title-link">
+          <div class="site-title">Elizabeth Healey, PhD</div>
+          <div class="header-subtitle">Research Fellow in Machine Learning for Healthcare</div>
+        </a>
+      </div>
+      <a href="index.html">About</a>
+      <a href="publications.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html" class="active-tab">CV</a>
+      <div class="sidebar-icons">
+        <a href="https://github.com/lizhealey" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/elizabeth-healey" target="_blank" class="icon-link"><i class="fab fa-linkedin"></i></a>
+        <a href="https://scholar.google.com/citations?user=-pkb8XIAAAAJ&hl=en" target="_blank" class="icon-link"><i class="fas fa-graduation-cap"></i></a>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+    
+    <!-- Mobile menu -->
+    <nav id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <a href="index.html">About</a>
+      <a href="publications.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html" class="active-tab">CV</a>
+      <div class="mobile-menu-icons">
+        <a href="https://github.com/lizhealey" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/elizabeth-healey" target="_blank" class="icon-link"><i class="fab fa-linkedin"></i></a>
+        <a href="https://scholar.google.com/citations?user=-pkb8XIAAAAJ&hl=en" target="_blank" class="icon-link"><i class="fas fa-graduation-cap"></i></a>
+      </div>
+    </nav>
+  </header>
+    <main style="margin-top: 5rem;">
+      
+        <iframe src="HealeyCV2025 (1).pdf#toolbar=0&navpanes=0&scrollbar=0" 
+        width="100%" 
+        height="600px" 
+        style="border:none; margin:0; padding:0; display:block;">
+</iframe>
+      
+    
+    </main>
+  </div>
+  <script src="scripts.js"></script>
+  
+  <!-- Simple mobile menu toggle script -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+    
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        body.classList.toggle('nav-open');
+        
+        const isOpen = body.classList.contains('nav-open');
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+          body.classList.remove('nav-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+        }
+      });
+      
+      // Close menu when clicking on a link
+      mobileMenu.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+          body.classList.remove('nav-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+        }
+      });
+      
+      // Close on escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+          body.classList.remove('nav-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+          menuToggle.focus();
+        }
+      });
+    }
+  });
+  </script>
+
+  <footer class="page-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Elizabeth Healey.</p>
+      <p class="last-updated">Website last updated: August 2025</p>
+    </div>
+  </footer>
+</body>
+</html>

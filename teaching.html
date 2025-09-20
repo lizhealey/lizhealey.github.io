@@ -11,117 +11,322 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teaching</title>
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Share+Tech:400&display=swap" rel="stylesheet">
+  <title>Teaching - Elizabeth Healey, PhD</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    header {
-      padding: 0; /* Removed gap between top of page and header */
-      position: fixed;
-      top: 0;
-      z-index: 1000;
-      width: 100%;
-    }
-  </style>
 </head>
-<body>
+<body class="no-sidebar">
   <div class="layout">
     <header>
       <nav class="header-nav-top">
+        <div class="header-name">
+          <a href="index.html" class="site-title-link">
+            <div class="site-title">Elizabeth Healey, PhD</div>
+            <div class="header-subtitle">Research Fellow in Machine Learning for Healthcare</div>
+          </a>
+        </div>
         <a href="index.html">About</a>
         <a href="publications.html">Research</a>
         <a href="teaching.html" class="active-tab">Teaching</a>
+        <a href="cv.html">CV</a>
+        <div class="sidebar-icons">
+          <a href="https://github.com/lizhealey" target="_blank" class="icon-link" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/elizabeth-healey" target="_blank" class="icon-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?user=-pkb8XIAAAAJ&hl=en" target="_blank" class="icon-link" aria-label="Google Scholar Profile"><i class="fas fa-graduation-cap"></i></a>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </nav>
+      
+      <!-- Mobile menu -->
+      <nav id="mobile-menu" class="mobile-menu" aria-hidden="true">
+        <a href="index.html">About</a>
+        <a href="publications.html">Research</a>
+        <a href="teaching.html" class="active-tab">Teaching</a>
+        <a href="cv.html">CV</a>
+        <div class="mobile-menu-icons">
+          <a href="https://github.com/lizhealey" target="_blank" class="icon-link" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/elizabeth-healey" target="_blank" class="icon-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?user=-pkb8XIAAAAJ&hl=en" target="_blank" class="icon-link" aria-label="Google Scholar Profile"><i class="fas fa-graduation-cap"></i></a>
+        </div>
       </nav>
     </header>
-    <main style="margin-top: 5rem;">
+
+    <main>
       <section>
-        <h2>Teaching</h2>
-        <p class="subtitle">
-          I have been on the teaching team of multiple graduate and undergraduate courses during my training across topics in electrical engineering, machine learning, and translational methods in bioinformatics. I was previously a <a href="https://tll.mit.edu/programming/grad-student-programming/tdf/" target="_blank">Teaching Development Fellow</a> and earned a teaching certificate by completing the <a href="https://tll.mit.edu/programming/grad-student-programming/teaching-certificate-pathways/grad-teaching-development-tracks/" target="_blank">Graduate Teaching Development tracks</a> at MIT.
-        </p>
-        <div class="teaching-item">
-          <a href="https://dbmi.hms.harvard.edu/education/courses/aisc-610" target="_blank">
-            <strong>AISC 610: Computationally-Enabled Medicine</strong><br>
-            <span>Data Science Mentor | Harvard Medical School</span>
-          </a>
-        </div>
-        <div class="teaching-item">
-          <a href="https://dbmi.hms.harvard.edu/education/courses/bmi-705" target="_blank">
-            <strong>BMI 707: Precision Medicine II - Integrating Clinical and Genomic Data</strong><br>
-            <span>Teaching Fellow | Harvard DBMI</span>
-          </a>
-        </div>
-        <div class="teaching-item">
-          <a href="https://dbmi.hms.harvard.edu/education/courses/bmi-703" target="_blank">
-            <strong>BMI 703: Precision Medicine I - Genomic Medicine</strong><br>
-            <span>Teaching Fellow | Harvard DBMI</span>
-          </a>
-        </div>
-        <div class="teaching-item">
-          <a href="https://dbmi.hms.harvard.edu/education/courses/bmi-707" target="_blank">
-            <strong>BMI 707: Deep Learning for Biomedical Data</strong><br>
-            <span>Teaching Fellow | Harvard DBMI</span>
-          </a>
-        </div>
-        <div class="teaching-item">
-          <a href="https://seas.harvard.edu/electrical-engineering/courses" target="_blank">
-            <strong>ES 152: Circuits, Devices, and Transduction</strong><br>
-            <span>Course Assistant | Harvard SEAS</span>
-          </a>
-        </div>
-        <div class="teaching-item">
-          <a href="#" target="_blank">
-            <strong>ES52: The Joy of Electronics</strong><br>
-            <span>Teaching Fellow | Harvard SEAS</span>
-          </a>
+        <div class="content-center">
+          <h2>Teaching</h2>
+          <p class="subtitle">
+            I have been on the teaching team of multiple graduate and undergraduate courses during my training across topics in electrical engineering, machine learning, and translational methods in bioinformatics. I was previously a <a href="https://tll.mit.edu/programming/grad-student-programming/tdf/" target="_blank">Teaching Development Fellow</a> and earned a teaching certificate by completing the <a href="https://tll.mit.edu/programming/grad-student-programming/teaching-certificate-pathways/grad-teaching-development-tracks/" target="_blank">Graduate Teaching Development tracks</a> at MIT.
+          </p>
         </div>
       </section>
+
+      <section class="courses-section">
+        <div class="content-center">
+          
+          <div class="teaching-container">
+            <div class="teaching-item">
+              <strong>HST.016: Artificial Intelligence in Health Care I</strong><br>
+              <span>Teaching Assistant | Harvard-MIT HST | 2024</span>
+              <button class="description-toggle" onclick="toggleDescription(this)">>></button>
+              <p class="course-description" style="display: none;">Course on fundamental concepts at the core of artificial intelligence, as applied to health care problems. Topics included deep learning for clinical risk stratification, bias and fairness in clinical machine learning, and transformer models.</p>
+            </div>
+            
+            <div class="teaching-item">
+              <a href="https://dbmi.hms.harvard.edu/education/courses/aisc-610" target="_blank">
+                <strong>AISC 610: Computationally-Enabled Medicine</strong>
+              </a><br>
+              <span>Data Science Mentor | Harvard Medical School | 2024</span>
+              <button class="description-toggle" onclick="toggleDescription(this)">>></button>
+              <p class="course-description" style="display: none;"> Course on computational methods for medical problems, focusing on data analysis and machine learning applications in healthcare.</p>
+            </div>
+            
+            <div class="teaching-item">
+              <a href="https://dbmi.hms.harvard.edu/education/courses/bmi-705" target="_blank">
+                <strong>BMI 707: Precision Medicine II - Integrating Clinical and Genomic Data</strong>
+              </a><br>
+              <span>Teaching Fellow | Harvard DBMI | 2022, 2023</span>
+              <button class="description-toggle" onclick="toggleDescription(this)">>></button>
+              <p class="course-description" style="display: none;"> Graduate-level course on biomedical data science leveraging genomic and phenotypic data for precision medicine..</p>
+            </div>
+            
+            <div class="teaching-item">
+              <a href="https://dbmi.hms.harvard.edu/education/courses/bmi-703" target="_blank">
+                <strong>BMI 703: Precision Medicine I - Genomic Medicine</strong>
+              </a><br>
+              <span>Teaching Fellow | Harvard DBMI | 2022, 2023
+                
+              </span>
+              <button class="description-toggle" onclick="toggleDescription(this)">>></button>
+              <p class="course-description" style="display: none;">Graduate-level course on biomedical data science leveraging genomic data for precision medicine. </p>
+            </div>
+            
+            <div class="teaching-item">
+              <a href="https://dbmi.hms.harvard.edu/education/courses/bmi-707" target="_blank">
+                <strong>BMI 707: Deep Learning for Biomedical Data</strong>
+              </a><br>
+              <span>Teaching Fellow | Harvard DBMI | 2021</span>
+              <button class="description-toggle" onclick="toggleDescription(this)">>></button>
+              <p class="course-description" style="display: none;">Course on deep learning for biomedical applications, including neural networks, CNNs, and RNNs for medical data analysis. </p>
+            </div>
+            
+            <div class="teaching-item">
+              <a href="https://seas.harvard.edu/electrical-engineering/courses" target="_blank">
+                <strong>ES 152: Circuits, Devices, and Transduction</strong>
+              </a><br>
+              <span>Course Assistant | Harvard SEAS | 2018</span>
+              <button class="description-toggle" onclick="toggleDescription(this)">>></button>
+              <p class="course-description" style="display: none;">Course on circuit analysis, electronic devices, and sensor transduction principles for undergraduate electrical engineering students.</p>
+            </div>
+            
+            <div class="teaching-item">
+              <strong>ES52: The Joy of Electronics</strong><br>
+              <span>Teaching Fellow | Harvard SEAS | 2017, 2018</span>
+              <button class="description-toggle" onclick="toggleDescription(this)">>></button>
+              <p class="course-description" style="display: none;">Introductory electronics course on digital and analog concepts and hands-on circuit building for undergraduate students. Laboratory-based learning fostered practical understanding of electronic principles.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <div class="footer-content">
+          <p>&copy; 2025 Elizabeth Healey.</p>
+          <p class="last-updated">Website last updated: August 2025</p>
+        </div>
+      </footer>
     </main>
-    <aside class="sidebar">
-      <h1>Elizabeth Healey, PhD</h1>
-      <p>
-        Research Fellow in
-        Machine Learning for Healthcare
-      </p>
-      <h3>Education</h3>
-      <p>
-        Ph.D., Massachusetts Institute of Technology<br>
-        <em>Health Sciences and Technology</em>
-      </p>
-      <p>
-        B.S., Harvard College<br>
-        <em>Electrical Engineering</em>
-      </p>
-      <h3>Interests</h3>
-      <ul>
-        
-        <li>Machine Learning for Precision Medicine</li>
-        <li>Clinical Decision Support</li>
-        <li>Physiological Signal Processing</li>
-        <li>Diabetes Technology</li>
-      </ul>
-      <h3>Contact</h3>
-      <p>
-        I can be contacted at <a href="mailto:ehealey@mit.edu">ehealey@mit.edu</a>
-      </p>
-      <div class="sidebar-icons">
-        <a href="https://github.com/lizhealey" target="_blank" class="icon-link">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/elizabeth-healey" target="_blank" class="icon-link">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://scholar.google.com/citations?user=-pkb8XIAAAAJ&hl=en" target="_blank" class="icon-link">
-          <i class="fas fa-graduation-cap"></i>
-        </a>
-      </div>
-      <div style="margin-bottom: 2rem;"></div>
-    </aside>
   </div>
-  <div style="text-align:center;color:#888;font-size:0.98rem;margin:2.5rem 0 1.2rem 0;">
+  
+  <script src="scripts.js"></script>
+  
+  <!-- Simple mobile menu toggle script -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
     
-  </div>
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        body.classList.toggle('nav-open');
+        
+        const isOpen = body.classList.contains('nav-open');
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+          body.classList.remove('nav-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+        }
+      });
+      
+      // Close menu when clicking on a link
+      mobileMenu.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+          body.classList.remove('nav-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+        }
+      });
+      
+      // Close on escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+          body.classList.remove('nav-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+          menuToggle.focus();
+        }
+      });
+    }
+  });
+  </script>
+
+  <style>
+  /* Page-specific styling to ensure consistency */
+  .content-center {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .subtitle {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .courses-section h2 {
+    color: var(--main-gold-dark);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .courses-section > .content-center > p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .teaching-container {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+  }
+
+  .teaching-item {
+    border-bottom: 1px solid #f1f5f9;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background: white;
+  }
+
+  .teaching-item:last-child {
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 0;
+  }
+
+  .teaching-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .teaching-item a:hover {
+    color: var(--main-blue);
+  }
+
+  .teaching-item strong {
+    color: var(--main-gold-dark);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .teaching-item span {
+    color: #666;
+    font-size: 0.95rem;
+  }
+
+  .description-toggle {
+    background: none;
+    border: none;
+    color: var(--main-blue);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: all 0.2s ease;
+    min-width: 2rem;
+    text-align: center;
+  }
+
+  .description-toggle:hover {
+    color: var(--main-blue-dark);
+  }
+
+  .course-description {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    font-style: italic;
+  }
+
+  /* Footer */
+  .page-footer {
+    margin-top: 3rem;
+    padding: 2rem;
+    text-align: center;
+    color: #666;
+    border-top: 1px solid #eee;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .content-center {
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+
+    .teaching-container {
+      padding: 1.5rem;
+    }
+
+    .teaching-item {
+      padding: 1rem;
+    }
+  }
+  </style>
+
+  <!-- Course description toggle function -->
+  <script>
+  function toggleDescription(button) {
+    const description = button.nextElementSibling;
+    if (description.style.display === 'none') {
+      description.style.display = 'block';
+      button.textContent = '<<';
+    } else {
+      description.style.display = 'none';
+      button.textContent = '>>';
+    }
+  }
+  </script>
 </body>
 </html>
