@@ -11,7 +11,7 @@ const publications = [
     category: "Research Interests",
     interest: "Diabetes Technology",
     type: "Journal",
-    link: ""
+    link: "https://dom-pubs.onlinelibrary.wiley.com/doi/full/10.1111/dom.16432"
   },
   {
     title: "CGM Data Analysis 2.0: Functional Data Pattern Recognition and Artificial Intelligence Applications",
@@ -22,7 +22,7 @@ const publications = [
     category: "Research Interests",
     interest: "Diabetes Technology",
     type: "Journal",
-    link: ""
+    link: "https://pubmed.ncbi.nlm.nih.gov/40814224/"
   },
   {
     title: "Medical artificial intelligence and human values",
@@ -87,6 +87,7 @@ const publications = [
     category: "Research Interests",
     interest: "Causal Machine Learning",
     type: "Conference",
+    link: "https://arxiv.org/abs/2212.01437"
   },
   {
     title: "Embedded model predictive control for a wearable artificial pancreas",
@@ -105,6 +106,7 @@ const publications = [
     journal: "arXiv",
     interest: "AI in Medicine",
     type: "Other",
+    link: "https://arxiv.org/abs/2502.06693"
   },
   {
     title: "Recent Advances, Applications and Open Challenges in Machine Learning for Health: Reflections from Research Roundtables at ML4H 2022 Symposium",
@@ -114,6 +116,7 @@ const publications = [
     category: "Research Interests",
     interest: "AI in Medicine",
     type: "Other",
+    link: "https://arxiv.org/abs/2502.06693"
   },
   {
     title: "Model-Based Insulin Sensitivity and Beta-Cell Function Estimation from Daily Continuous Glucose Monitoring",
@@ -128,6 +131,7 @@ const publications = [
     interest: "Diabetes Technology",
     type: "Conference",
     presentation: "Oral presentation at IEEE EMBC 2024",
+    link:"https://ieeexplore.ieee.org/abstract/document/10781685"
   }
 ];
 
@@ -246,6 +250,13 @@ function renderInterestButtons() {
   const wrapper = document.createElement('div');
   wrapper.className = 'interest-controls-wrapper';
   
+  // Create filter label
+  const filterLabel = document.createElement('span');
+  filterLabel.textContent = 'Filter by topic:';
+  filterLabel.style.marginRight = '1rem';
+  filterLabel.style.fontWeight = '500';
+  filterLabel.style.color = '#555';
+  
   // Interest buttons row
   const interestRow = document.createElement('div');
   interestRow.className = 'interest-buttons-row';
@@ -254,6 +265,7 @@ function renderInterestButtons() {
   interestRow.style.justifyContent = 'center';
   interestRow.style.gap = '0.25rem';
   interestRow.style.marginBottom = '0';
+  interestRow.style.alignItems = 'center';
   
   // Create "All" button - will be added at the end
   const allBtn = document.createElement('button');
@@ -336,6 +348,9 @@ function renderInterestButtons() {
   
   // Add "All" button at the end
   interestRow.appendChild(allBtn);
+  
+  // Add filter label at the beginning
+  interestRow.insertBefore(filterLabel, interestRow.firstChild);
   
   wrapper.appendChild(interestRow);
   
