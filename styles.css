@@ -297,10 +297,10 @@ body.no-sidebar main {
   color: #ffffff !important;
 }
 
-/* Headshot Images */
+/* Headshot Images - Further reduced size for home page */
 .headshot-img, .home-headshot {
   width: 100%;
-  max-width: 750px;
+  max-width: 350px; /* Further reduced from 500px */
   height: auto;
   border-radius: 8px;
   border: 4px solid #fff;
@@ -310,7 +310,7 @@ body.no-sidebar main {
 }
 
 .home-headshot {
-  max-width: 450px;
+  max-width: 200px; /* Further reduced from 300px */
 }
 
 /* About Section */
@@ -688,7 +688,7 @@ main a:hover, .sidebar a:hover {
   }
 
   .headshot-img, .home-headshot {
-    max-width: 80%;
+    max-width: 200px; /* Keep consistent with desktop size, prevent enlargement */
   }
 
   #publications-container {
